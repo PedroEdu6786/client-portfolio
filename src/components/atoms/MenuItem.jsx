@@ -1,8 +1,13 @@
+import { useState, useEffect } from 'react'
 import { Stack } from '@chakra-ui/react'
 import { MotionBox, MotionHeading } from '../../motion/motionComponents'
 import { spring, menuItem } from '../../motion/motionVariants'
 
 const MenuItem = ({ children, isSelected, setSelected }) => {
+  const [screenWidth, setScreenWidth] = useState(0)
+  useEffect(() => {
+    setScreenWidth(screen.width)
+  }, [screenWidth])
   return (
     <Stack
       direction={{ base: 'row-reverse', md: 'column' }}
@@ -21,7 +26,7 @@ const MenuItem = ({ children, isSelected, setSelected }) => {
         }
         variants={menuItem}
         transition={spring}
-        animate={isSelected && screen.width < 768 ? 'side' : 'hide'}
+        animate={isSelected && screenWidth < 768 ? 'side' : 'hide'}
         onClick={setSelected}
       >
         {children}

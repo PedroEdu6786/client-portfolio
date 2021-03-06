@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Box, HStack, Stack } from '@chakra-ui/react'
+import { HStack } from '@chakra-ui/react'
 import Burger from '../atoms/Burger'
 import Overlay from '../atoms/Overlay'
 import Navbar from '../molecules/Navbar'
 import Logo from '../molecules/Logo'
+import MarginTemplate from '../templates/MarginTemplate'
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false)
@@ -12,7 +13,7 @@ const Header = () => {
     <>
       {/* --------------- OVERLAY ---------------*/}
       <Overlay isActive={menuState} setOverlay={setMenuState} />
-      <Box mx="2rem">
+      <MarginTemplate>
         <HStack
           h="5rem"
           pt="2rem"
@@ -32,7 +33,7 @@ const Header = () => {
           {/* --------------- NAVBAR ---------------*/}
           <Navbar menuState={menuState} />
         </HStack>
-      </Box>
+      </MarginTemplate>
     </>
   )
 }

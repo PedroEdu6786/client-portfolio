@@ -15,7 +15,7 @@ const Burger = ({ menuState, setMenuState, ...rest }) => {
       w="30px"
       cursor="pointer"
       spacing=".35rem"
-      zIndex="101"
+      zIndex="110"
       for="check"
       onClick={() => setMenuState(!menuState)}
       {...rest}
