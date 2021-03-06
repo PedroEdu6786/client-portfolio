@@ -24,6 +24,7 @@ const Navbar = ({ menuState }) => {
       top={0}
       right={menuState ? 0 : '-100%'}
       bgColor={{ base: 'portfolio.blue', md: 'portfolio.gray' }}
+      zIndex="101"
     >
       <Stack
         mt={{ base: '4rem', md: '0' }}
