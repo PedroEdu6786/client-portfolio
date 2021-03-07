@@ -22,7 +22,7 @@ const MenuItem = ({ children, isSelected, setSelected }) => {
         color={
           isSelected
             ? { base: 'portfolio.white', md: 'portfolio.black' }
-            : { base: 'portfolio.lightBlue', md: 'portfolio.darkGray' }
+            : { base: 'portfolio.lightPrimary', md: 'portfolio.darkGray' }
         }
         variants={menuItem}
         transition={spring}
