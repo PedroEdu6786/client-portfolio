@@ -5,6 +5,7 @@ export const projects = [
     color2: 'portfolio.darkPurple',
     projectType: 'Ecommerce',
     projectTitle: 'Lorem ipsum dolor-1',
+    img: '/img/landing-1.png',
   },
   {
     id: 1,
@@ -12,13 +13,15 @@ export const projects = [
     color2: 'portfolio.darkOrange',
     projectType: 'Ecommerce',
     projectTitle: 'Lorem ipsum dolor-2',
+    img: '/img/landing-1.png',
   },
   {
     id: 2,
     color1: 'portfolio.lightRed',
     color2: 'portfolio.darkRed',
-    projectType: 'Ecommerce',
-    projectTitle: 'Lorem ipsum dolor-3',
+    projectType: 'Landing Page',
+    projectTitle: 'Sun.mx',
+    img: '/img/landing-1.png',
   },
   {
     id: 3,
@@ -26,5 +29,6 @@ export const projects = [
     color2: 'portfolio.darkBlue',
     projectType: 'Ecommerce',
     projectTitle: 'Lorem ipsum dolor-4',
+    img: '/img/landing-1.png',
   },
 ]

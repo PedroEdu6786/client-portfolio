@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
 import { Box, Heading, Stack, Text } from '@chakra-ui/layout'
-import { MotionBox } from '../../motion/motionComponents'
+import { MotionBox, MotionImage } from '../../motion/motionComponents'
 import Overlay from '../atoms/Overlay'
 import { projects } from '../../constants/projects'
 
 const ProjectDisplay = ({ id }) => {
   const router = useRouter()
 
-  const { color1, color2, projectType, projectTitle } = projects.find(
+  const { color1, color2, projectType, projectTitle, img } = projects.find(
     (project) => project.id == id
   )
 
@@ -42,7 +42,19 @@ const ProjectDisplay = ({ id }) => {
             h="150px"
             borderRadius="1rem"
             bgGradient={`linear(to-bl, ${color1}, ${color2})`}
-          ></Box>
+            overflow="hidden"
+            pos="relative"
+          >
+            <MotionImage
+              src={img}
+              alt="project-prop"
+              width={184}
+              height={360}
+              bottom="-250"
+              right="5"
+              pos="absolute"
+            />
+          </Box>
           <Stack spacing="1.5rem">
             <Box>
               <Text>{projectType}</Text>
