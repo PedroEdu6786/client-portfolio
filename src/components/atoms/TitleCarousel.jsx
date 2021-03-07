@@ -1,10 +1,18 @@
-import { Heading } from '@chakra-ui/layout'
+import { MotionHeading } from '../../motion/motionComponents'
 
 const TitleCarousel = ({ children, ...rest }) => {
   return (
-    <Heading as="h2" fontSize="5rem" color="portfolio.lightGray" {...rest}>
+    <MotionHeading
+      as="h2"
+      fontSize="5rem"
+      color="portfolio.lightGray"
+      // initial={{ x: '100%' }}
+      // animate={{ x: '-100%' }}
+      // transition={{ type: 'linear', repeat: Infinity }}
+      {...rest}
+    >
       {children}
-    </Heading>
+    </MotionHeading>
   )
 }
 
