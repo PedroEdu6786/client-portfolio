@@ -2,6 +2,7 @@ import { Button } from '@chakra-ui/button'
 import { Image } from '@chakra-ui/image'
 import { Box, Heading, Stack, Text } from '@chakra-ui/layout'
 import styled from '@emotion/styled'
+import Title from '../atoms/Title'
 import HeroIcon from '../molecules/HeroIcon'
 import HeroMessages from '../molecules/HeroMessages'
 import SocialMedia from '../molecules/SocialMedia'
@@ -57,9 +58,7 @@ const Hero = () => {
           <HeroIcon />
           <Stack align="center" spacing="1.5rem">
             <Text fontSize="1.25rem">Hi, I'm Pedro Cruz</Text>
-            <Heading size="lg" align="center">
-              Building apps, growing bussinesses and experiences
-            </Heading>
+            <Title>Building apps, growing businesses and experiences</Title>
             <Button bgColor="portfolio.blue" size="lg" color="portfolio.white">
               Check out my work!
             </Button>

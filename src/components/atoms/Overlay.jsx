@@ -1,25 +1,18 @@
-import { Box } from '@chakra-ui/layout'
 import { MotionBox } from '../../motion/motionComponents'
 
-const Overlay = ({ isActive, setOverlay }) => {
-  const handleClick = () => {
-    if (isActive) setOverlay(!isActive)
-  }
-
+const Overlay = () => {
   return (
     <>
-      {isActive && (
-        <MotionBox
-          bgColor="black"
-          pos="fixed"
-          zIndex="1"
-          w="100vw"
-          h="100vh"
-          initial={{ opacity: 0 }}
-          animate={isActive ? { opacity: 0.4 } : { opacity: 0 }}
-          onClick={handleClick}
-        ></MotionBox>
-      )}
+      <MotionBox
+        bgColor="black"
+        pos="fixed"
+        top="0"
+        zIndex="1"
+        w="100%"
+        h="100%"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+      ></MotionBox>
     </>
   )
 }
