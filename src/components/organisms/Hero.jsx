@@ -1,23 +1,12 @@
 import { Button } from '@chakra-ui/button'
 import { Image } from '@chakra-ui/image'
-import { Box, Heading, Stack, Text } from '@chakra-ui/layout'
-import styled from '@emotion/styled'
+import { Box, Stack, Text } from '@chakra-ui/layout'
+import { Filter } from '../atoms/Filter'
 import Title from '../atoms/Title'
 import HeroIcon from '../molecules/HeroIcon'
 import HeroMessages from '../molecules/HeroMessages'
 import SocialMedia from '../molecules/SocialMedia'
 import MarginTemplate from '../templates/MarginTemplate'
-
-const Filter = styled.span`
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  mix-blend-mode: hue;
-  background: blue;
-  top: 150px;
-  right: -20px;
-  z-index: 0;
-`
 
 const Hero = () => {
   return (
@@ -33,16 +22,7 @@ const Hero = () => {
         filter="drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.25))"
         alt=""
       />
-      {/* <Box
-        bgColor="portfolio.blue"
-        pos="absolute"
-        w="150px"
-        h="150px"
-        top="150"
-        right="-20"
-        zIndex="0"
-      ></Box> */}
-      <Filter></Filter>
+      <Filter top="150px" right="-20px" />
       <Image
         pos="absolute"
         w="150px"
