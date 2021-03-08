@@ -32,7 +32,7 @@ const Projects = () => {
       <MarginTemplate>
         <Stack mt="3rem" spacing="1.5rem">
           {projects.map((item) => (
-            <ProjectCard item={item} />
+            <ProjectCard key={item.id} item={item} />
           ))}
         </Stack>
       </MarginTemplate>
