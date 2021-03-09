@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Input,
   InputGroup,
@@ -10,10 +9,11 @@ import MarginTemplate from '../templates/MarginTemplate'
 import Title from '../atoms/Title'
 import TextVariant from '../atoms/TextVariant'
 import Wireframes from '../atoms/Wireframes'
+import SectionTemplate from '../templates/SectionTemplate'
 
 const Newsletter = () => {
   return (
-    <Box py="30rem" overflow="hidden" pos="relative">
+    <SectionTemplate pb="25rem" overflow="hidden" pos="relative">
       <MarginTemplate>
         <Stack spacing="3rem">
           <Title>
@@ -43,7 +43,7 @@ const Newsletter = () => {
         </Stack>
       </MarginTemplate>
       <Wireframes />
-    </Box>
+    </SectionTemplate>
   )
 }
 

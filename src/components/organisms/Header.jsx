@@ -14,7 +14,7 @@ const Header = () => {
   }
 
   return (
-    <>
+    <Box as="section">
       {/* --------------- OVERLAY ---------------*/}
       <Box onClick={handleOverlay}>{menuState && <Overlay />}</Box>
       <MarginTemplate>
@@ -38,7 +38,7 @@ const Header = () => {
           <Navbar menuState={menuState} />
         </HStack>
       </MarginTemplate>
-    </>
+    </Box>
   )
 }
 

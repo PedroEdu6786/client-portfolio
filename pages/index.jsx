@@ -1,20 +1,17 @@
-import Footer from '../src/components/organisms/Footer'
-import Header from '../src/components/organisms/Header'
+import PageTemplate from '../src/components/templates/PageTemplate'
 import Hero from '../src/components/organisms/Hero'
-import Newsletter from '../src/components/organisms/Newsletter'
 import Projects from '../src/components/organisms/Projects'
 import Services from '../src/components/organisms/Services'
+import Newsletter from '../src/components/organisms/Newsletter'
 
 const Home = () => {
   return (
-    <>
-      <Header />
+    <PageTemplate>
       <Hero />
       <Projects />
       <Services />
       <Newsletter />
-      <Footer />
-    </>
+    </PageTemplate>
   )
 }
 
