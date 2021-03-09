@@ -13,7 +13,7 @@ import Wireframes from '../atoms/Wireframes'
 
 const Newsletter = () => {
   return (
-    <Box mt="10rem">
+    <Box py="30rem" overflow="hidden" pos="relative">
       <MarginTemplate>
         <Stack spacing="3rem">
           <Title>
@@ -42,7 +42,7 @@ const Newsletter = () => {
           </InputGroup>
         </Stack>
       </MarginTemplate>
-      <Wireframes top="0" />
+      <Wireframes />
     </Box>
   )
 }

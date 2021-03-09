@@ -1,3 +1,4 @@
+import Footer from '../src/components/organisms/Footer'
 import Header from '../src/components/organisms/Header'
 import Hero from '../src/components/organisms/Hero'
 import Newsletter from '../src/components/organisms/Newsletter'
@@ -12,6 +13,7 @@ const Home = () => {
       <Projects />
       <Services />
       <Newsletter />
+      <Footer />
     </>
   )
 }
