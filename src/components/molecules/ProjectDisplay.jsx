@@ -1,18 +1,31 @@
 import { useRouter } from 'next/router'
-import { Box, Heading, Stack, Text } from '@chakra-ui/layout'
+import { Box, Stack } from '@chakra-ui/layout'
 import { MotionBox, MotionImage } from '../../motion/motionComponents'
 import Overlay from '../atoms/Overlay'
 import { projects } from '../../constants/projects'
+import CardSubtitle from '../atoms/CardSubtitle'
+import CardTitle from '../atoms/CardTitle'
+import Description from '../atoms/Description'
 
 const ProjectDisplay = ({ id }) => {
   const router = useRouter()
 
-  const { color1, color2, projectType, projectTitle, img } = projects.find(
-    (project) => project.id == id
-  )
+  /* --------------- FIND PROJECT BY ID ---------------*/
+  const {
+    color1,
+    color2,
+    projectType,
+    projectTitle,
+    img,
+    description,
+  } = projects.find((project) => project.id == id)
+
+  /* --------------- CLOSE MODAL ---------------*/
 
   const handleModal = () => {
     const options = { scroll: false }
+
+    /* --------------- ROUTE TO/AS/CONFIG ---------------*/
     router.push('/', '/', options)
   }
 
@@ -57,16 +70,10 @@ const ProjectDisplay = ({ id }) => {
           </Box>
           <Stack spacing="1.5rem">
             <Box>
-              <Text>{projectType}</Text>
-              <Heading size="lg">{projectTitle}</Heading>
+              <CardSubtitle>{projectType}</CardSubtitle>
+              <CardTitle size="lg">{projectTitle}</CardTitle>
             </Box>
-            <Text fontSize=".9rem">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              ducimus minima dicta obcaecati perferendis mollitia dolorum
-              reiciendis autem accusantium delectus provident quis id explicabo
-              perspiciatis quasi, consequatur repudiandae omnis dolore qui. Et
-              architecto ab vero blanditiis dolorum temporibus excepturi at.
-            </Text>
+            <Description>{description}</Description>
           </Stack>
         </Stack>
       </MotionBox>

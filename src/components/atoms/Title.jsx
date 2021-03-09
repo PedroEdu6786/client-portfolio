@@ -2,7 +2,7 @@ import { Heading } from '@chakra-ui/layout'
 
 const Title = ({ children, ...rest }) => {
   return (
-    <Heading size="lg" align="center" {...rest}>
+    <Heading fontSize="1.8rem" align="center" {...rest}>
       {children}
     </Heading>
   )

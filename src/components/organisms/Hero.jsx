@@ -1,49 +1,31 @@
-import { Button } from '@chakra-ui/button'
-import { Image } from '@chakra-ui/image'
-import { Box, Stack, Text } from '@chakra-ui/layout'
-import { Filter } from '../atoms/Filter'
-import Title from '../atoms/Title'
+import { Stack } from '@chakra-ui/layout'
 import HeroIcon from '../molecules/HeroIcon'
 import HeroMessages from '../molecules/HeroMessages'
+import HeroProps from '../molecules/HeroProps'
 import SocialMedia from '../molecules/SocialMedia'
+import HeroHeadline from '../molecules/HeroHeadline'
 import HeroTemplate from '../templates/HeroTemplate'
 import MarginTemplate from '../templates/MarginTemplate'
 
 const Hero = () => {
   return (
     <HeroTemplate pos="relative" overflow="hidden">
+      {/* --------------- TEXT MESSAGES POP UPS ---------------*/}
       <HeroMessages />
-      <Image
-        pos="absolute"
-        w="150px"
-        bottom="150"
-        left="-20"
-        zIndex="-1"
-        src="./img/3d-cube.png"
-        filter="drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.25))"
-        alt=""
-      />
-      <Filter top="150px" right="-20px" />
-      <Image
-        pos="absolute"
-        w="150px"
-        top="150"
-        right="-20"
-        zIndex="-1"
-        src="./img/3d-diamond.png"
-        filter="drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.25))"
-        alt=""
-      />
+
+      {/* --------------- 3D IMAGES ---------------*/}
+      <HeroProps />
+
+      {/* --------------- HERO CONTENT ---------------*/}
       <MarginTemplate>
         <Stack align="center" spacing="3rem">
+          {/* --------------- MIDDLE ICON ---------------*/}
           <HeroIcon />
-          <Stack align="center" spacing="1.5rem">
-            <Text fontSize="1.25rem">Hi, I'm Pedro Cruz</Text>
-            <Title>Building apps, growing businesses and experiences</Title>
-            <Button bgColor="portfolio.blue" size="lg" color="portfolio.white">
-              Check out my work!
-            </Button>
-          </Stack>
+
+          {/* --------------- TEXT AND CALL TO ACTION ---------------*/}
+          <HeroHeadline />
+
+          {/* --------------- SOCIAL LINKS ---------------*/}
           <SocialMedia />
         </Stack>
       </MarginTemplate>
