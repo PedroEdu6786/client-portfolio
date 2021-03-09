@@ -9,6 +9,7 @@ import MarginTemplate from '../templates/MarginTemplate'
 const Header = () => {
   const [menuState, setMenuState] = useState(false)
 
+  /* --------------- CLOSE SIDEBAR AND REMOVE OVERLAY ---------------*/
   const handleOverlay = () => {
     setMenuState((prevState) => !prevState)
   }

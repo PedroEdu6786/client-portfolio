@@ -10,12 +10,14 @@ import { projects } from '../../constants/projects'
 import SectionTemplate from '../templates/SectionTemplate'
 
 const Projects = () => {
+  /* --------------- CONTEXTUAL ROUTING TOOLS ---------------*/
   const router = useRouter()
   const { projectId } = router.query
 
   return (
     <SectionTemplate>
-      <Stack justify="center" pos="relative" overflow="hidden">
+      {/* --------------- PROJECT SUBTITLE ---------------*/}
+      <Stack my="5rem" justify="center" pos="relative" overflow="hidden">
         <Title mx="2rem">Featured Projects that shocked clients</Title>
         <TitleCarousel
           pos="absolute"
@@ -28,6 +30,8 @@ const Projects = () => {
           Featured Projects
         </TitleCarousel>
       </Stack>
+
+      {/* --------------- PROJECTS CARDS ---------------*/}
       <MarginTemplate>
         <Stack mt="3rem" spacing="1.5rem">
           {projects.map((item) => (
@@ -35,6 +39,8 @@ const Projects = () => {
           ))}
         </Stack>
       </MarginTemplate>
+
+      {/* --------------- PROJECT MODAL ---------------*/}
       <AnimatePresence>
         {projectId && <ProjectDisplay id={projectId} />}
       </AnimatePresence>

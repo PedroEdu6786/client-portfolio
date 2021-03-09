@@ -10,5 +10,5 @@ export const Filter = styled.span`
   right: ${(props) => props.right && props.right};
   bottom: ${(props) => props.bottom && props.bottom};
   left: ${(props) => props.left && props.left};
-  z-index: 0;
+  z-index: -1;
 `

@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { MotionBox } from '../../motion/motionComponents'
 import { iconMotion } from '../../motion/motionVariants'
 import ReactIcon from '../atoms/ReactIcon'
 
-const SocialIcon = ({ icon, ...rest }) => {
+const SocialIcon = ({ icon, to, ...rest }) => {
   return (
     <MotionBox
       color="portfolio.blue"
@@ -15,7 +16,11 @@ const SocialIcon = ({ icon, ...rest }) => {
       whileHover="show"
       whileTap="show"
     >
-      <ReactIcon as={icon} fontSize="2rem" {...rest} />
+      <Link href={to}>
+        <a target="_blank">
+          <ReactIcon as={icon} fontSize="2rem" {...rest} />
+        </a>
+      </Link>
     </MotionBox>
   )
 }
