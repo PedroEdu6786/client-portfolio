@@ -6,11 +6,12 @@ import Title from '../atoms/Title'
 import HeroIcon from '../molecules/HeroIcon'
 import HeroMessages from '../molecules/HeroMessages'
 import SocialMedia from '../molecules/SocialMedia'
+import HeroTemplate from '../templates/HeroTemplate'
 import MarginTemplate from '../templates/MarginTemplate'
 
 const Hero = () => {
   return (
-    <Box pos="relative" overflow="hidden">
+    <HeroTemplate pos="relative" overflow="hidden">
       <HeroMessages />
       <Image
         pos="absolute"
@@ -33,7 +34,7 @@ const Hero = () => {
         filter="drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.25))"
         alt=""
       />
-      <MarginTemplate pt="5rem">
+      <MarginTemplate>
         <Stack align="center" spacing="3rem">
           <HeroIcon />
           <Stack align="center" spacing="1.5rem">
@@ -46,7 +47,7 @@ const Hero = () => {
           <SocialMedia />
         </Stack>
       </MarginTemplate>
-    </Box>
+    </HeroTemplate>
   )
 }
 

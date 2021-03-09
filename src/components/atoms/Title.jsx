@@ -1,8 +1,8 @@
 import { Heading } from '@chakra-ui/layout'
 
-const Title = ({ children }) => {
+const Title = ({ children, ...rest }) => {
   return (
-    <Heading size="lg" align="center">
+    <Heading size="lg" align="center" {...rest}>
       {children}
     </Heading>
   )

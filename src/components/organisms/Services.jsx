@@ -1,30 +1,31 @@
-import { Box, Heading, Image, Stack } from '@chakra-ui/react'
+import { Heading, Image, Stack } from '@chakra-ui/react'
 import { TiBrush } from 'react-icons/ti'
 import { RiMacbookLine } from 'react-icons/ri'
 import { GoSearch } from 'react-icons/go'
 import ServiceBox from '../molecules/ServiceBox'
 import MarginTemplate from '../templates/MarginTemplate'
 import { Filter } from '../atoms/Filter'
+import SectionTemplate from '../templates/SectionTemplate'
 
 const Services = () => {
   return (
-    <Box mt="5rem" pos="relative" overflow="hidden">
-      <Filter top="0" right="-50px" />
+    <SectionTemplate pos="relative" overflow="hidden">
+      <Filter top="120px" right="-50px" />
       <Image
         src="/img/3d-ring.png"
         pos="absolute"
         w="150px"
         zIndex="-1"
-        top="0"
+        top="120px"
         right="-50px"
       />
-      <Filter bottom="0" left="-50px" />
+      <Filter bottom="150px" left="-50px" />
       <Image
         src="/img/3d-pill.png"
         pos="absolute"
         w="150px"
         zIndex="-1"
-        bottom="0"
+        bottom="150px"
         left="-50px"
       />
       <MarginTemplate pt="5rem" pb="15rem">
@@ -52,7 +53,7 @@ const Services = () => {
           </Stack>
         </Stack>
       </MarginTemplate>
-    </Box>
+    </SectionTemplate>
   )
 }
 
