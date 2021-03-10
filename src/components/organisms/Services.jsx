@@ -4,7 +4,7 @@ import ServicesContent from '../molecules/ServicesContent'
 
 const Services = () => {
   return (
-    <SectionTemplate pos="relative" overflow="hidden">
+    <SectionTemplate pos="relative" overflow="hidden" id="services">
       <ServicesProps />
       <ServicesContent />
     </SectionTemplate>

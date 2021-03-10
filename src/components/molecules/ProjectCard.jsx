@@ -15,6 +15,7 @@ const ProjectCard = ({ item }) => {
         <MotionBox
           p="2rem"
           h="18rem"
+          w="100%"
           borderRadius=".5rem"
           bgGradient={`linear(to-bl, ${color1}, ${color2})`}
           layoutId={`${id}`}
@@ -22,6 +23,7 @@ const ProjectCard = ({ item }) => {
           pos="relative"
           cursor="pointer"
           color="portfolio.white"
+          lineHeight={{ md: '2rem' }}
         >
           <CardSubtitle>{projectType}</CardSubtitle>
           <CardTitle>{projectTitle}</CardTitle>

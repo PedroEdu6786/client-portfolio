@@ -1,11 +1,11 @@
-import { Heading } from '@chakra-ui/layout'
+import { Box, Heading } from '@chakra-ui/layout'
 import { Text } from '@chakra-ui/layout'
 import TextMessage from './TextMessage'
 
 const HeroMessages = () => {
   return (
-    <>
-      <TextMessage right="-10" top="0">
+    <Box display={{ base: 'none', md: 'block' }}>
+      <TextMessage right="0" top="100">
         <Text fontWeight="600" color="portfolio.darkGray" size="md">
           Freelance
         </Text>
@@ -13,7 +13,7 @@ const HeroMessages = () => {
           Web Developer
         </Heading>
       </TextMessage>
-      <TextMessage w="300px" left="-10" top="40">
+      <TextMessage w="300px" left="0" top="250">
         <Text fontWeight="600" size="md">
           What makes me different?
         </Text>
@@ -22,7 +22,7 @@ const HeroMessages = () => {
           recognitions by professionals
         </Text>
       </TextMessage>
-    </>
+    </Box>
   )
 }
 

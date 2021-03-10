@@ -3,7 +3,7 @@ import React from 'react'
 
 const MarginTemplate = ({ children, ...rest }) => {
   return (
-    <Box mx="2rem" {...rest}>
+    <Box mx={{ base: '2rem', md: '4rem' }} {...rest}>
       {children}
     </Box>
   )

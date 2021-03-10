@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Stack } from '@chakra-ui/layout'
+import { Stack, Wrap, WrapItem } from '@chakra-ui/layout'
 import { AnimatePresence } from 'framer-motion'
 import Title from '../atoms/Title'
 import TitleCarousel from '../atoms/TitleCarousel'
@@ -15,9 +15,9 @@ const Projects = () => {
   const { projectId } = router.query
 
   return (
-    <SectionTemplate>
+    <SectionTemplate id="projects">
       {/* --------------- PROJECT SUBTITLE ---------------*/}
-      <Stack my="5rem" justify="center" pos="relative" overflow="hidden">
+      <Stack py="5rem" justify="center" pos="relative" overflow="hidden">
         <Title mx="2rem">Featured Projects that shocked clients</Title>
         <TitleCarousel
           pos="absolute"
@@ -33,11 +33,17 @@ const Projects = () => {
 
       {/* --------------- PROJECTS CARDS ---------------*/}
       <MarginTemplate>
-        <Stack mt="3rem" spacing="1.5rem">
+        <Wrap mt="3rem" spacing="1.5rem">
           {projects.map((item) => (
-            <ProjectCard key={item.id} item={item} />
+            <WrapItem
+              key={item.id}
+              flexGrow={item.id === 0 || item.id === 3 ? '6' : '1'}
+              flexBasis={{ base: '30rem', md: '40%' }}
+            >
+              <ProjectCard item={item} />
+            </WrapItem>
           ))}
-        </Stack>
+        </Wrap>
       </MarginTemplate>
 
       {/* --------------- PROJECT MODAL ---------------*/}

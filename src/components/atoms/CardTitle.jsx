@@ -3,7 +3,7 @@ import React from 'react'
 
 const CardTitle = ({ children, ...rest }) => {
   return (
-    <Heading as="h3" size="md" {...rest}>
+    <Heading as="h3" fontSize={{ base: '1.2rem', md: '1.5rem' }} {...rest}>
       {children}
     </Heading>
   )

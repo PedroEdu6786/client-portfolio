@@ -3,7 +3,7 @@ import ButtonAction from '../atoms/ButtonAction'
 
 const NewsletterForm = () => {
   return (
-    <InputGroup size="lg">
+    <InputGroup size="lg" pos="relative" zIndex="0">
       <Input
         type="email"
         variant="filled"

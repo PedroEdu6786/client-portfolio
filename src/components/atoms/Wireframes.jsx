@@ -5,12 +5,11 @@ const Wireframes = () => {
     <Box
       as="svg"
       pos="absolute"
-      bottom="-10rem"
-      left="-5rem"
+      bottom={{ base: '-10rem', md: '-30rem', lg: '-40rem' }}
       mt="-30rem"
+      right="0"
       zIndex="-1"
-      width="2260"
-      height="1804"
+      maxW={{ base: '30rem', md: '50rem', lg: '60rem' }}
       viewBox="0 0 1000 1804"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

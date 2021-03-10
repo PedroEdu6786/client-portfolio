@@ -6,7 +6,7 @@ import ServiceBox from '../molecules/ServiceBox'
 
 const ServiceCard = () => {
   return (
-    <Stack spacing="5rem" direction={['column', 'row']}>
+    <Stack spacing="5rem" direction={{ base: 'column', md: 'row' }}>
       <ServiceBox
         icon={TiBrush}
         color="portfolio.lightRed"
