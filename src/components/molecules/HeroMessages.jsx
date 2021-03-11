@@ -5,7 +5,7 @@ import TextMessage from './TextMessage'
 const HeroMessages = () => {
   return (
     <Box display={{ base: 'none', md: 'block' }}>
-      <TextMessage right="0" top="100">
+      <TextMessage right={{ base: '0', lg: 50 }} top="0">
         <Text fontWeight="600" color="portfolio.darkGray" size="md">
           Freelance
         </Text>
@@ -13,7 +13,7 @@ const HeroMessages = () => {
           Web Developer
         </Heading>
       </TextMessage>
-      <TextMessage w="300px" left="0" top="250">
+      <TextMessage w="300px" left={{ base: '0', lg: 50 }} top="120">
         <Text fontWeight="600" size="md">
           What makes me different?
         </Text>

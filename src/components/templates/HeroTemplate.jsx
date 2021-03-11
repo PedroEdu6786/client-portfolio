@@ -5,11 +5,13 @@ const HeroTemplate = ({ children, ...rest }) => {
     <Box
       as="section"
       h="100vh"
-      py="5rem"
+      py={{ base: '3rem', md: '5rem' }}
       mt={{ base: '-2rem', md: '-5rem' }}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
+      display={{ md: 'flex' }}
+      justifyContent={{ md: 'center' }}
+      alignItems={{ md: 'center' }}
+      maxW="1400px"
+      mx="auto"
       {...rest}
     >
       {children}

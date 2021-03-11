@@ -3,7 +3,7 @@ import Title from '../atoms/Title'
 
 const NewsletterContent = () => {
   return (
-    <Title>
+    <Title maxW="800px">
       Join Our newsletter to get exclusive <TextVariant>discounts</TextVariant>{' '}
       and <TextVariant>giveaways</TextVariant>
     </Title>

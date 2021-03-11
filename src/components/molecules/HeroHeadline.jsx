@@ -4,7 +4,7 @@ import Title from '../atoms/Title'
 
 const HeroHeadline = () => {
   return (
-    <Stack align="center" spacing="1.5rem" maxW="50vh">
+    <Stack align="center" spacing="1.5rem" maxW="50vh" px="2rem">
       <Text fontSize={{ base: '1.25rem', md: '2.5vh' }}>
         Hi, I'm Pedro Cruz
       </Text>
