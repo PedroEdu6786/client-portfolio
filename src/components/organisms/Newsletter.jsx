@@ -9,7 +9,7 @@ const Newsletter = () => {
   return (
     <SectionTemplate pb="25rem" overflow="hidden" pos="relative">
       <MarginTemplate>
-        <Stack spacing="3rem">
+        <Stack spacing="3rem" align="center">
           <NewsletterContent />
           <NewsletterForm />
         </Stack>

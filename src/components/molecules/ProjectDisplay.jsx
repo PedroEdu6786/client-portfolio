@@ -43,7 +43,7 @@ const ProjectDisplay = ({ id }) => {
         mx="auto"
         p="2rem"
         top="5rem"
-        w="90%"
+        w={{ base: '90%', md: '40rem' }}
         h="600px"
         borderRadius="1rem"
         color="portfolio.white"
@@ -69,10 +69,10 @@ const ProjectDisplay = ({ id }) => {
             />
           </Box>
           <Stack spacing="1.5rem">
-            <Box>
+            <Stack>
               <CardSubtitle>{projectType}</CardSubtitle>
               <CardTitle size="lg">{projectTitle}</CardTitle>
-            </Box>
+            </Stack>
             <Description>{description}</Description>
           </Stack>
         </Stack>

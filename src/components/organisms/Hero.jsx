@@ -10,25 +10,23 @@ import MarginTemplate from '../templates/MarginTemplate'
 const Hero = () => {
   return (
     <HeroTemplate pos="relative" overflow="hidden">
-      {/* --------------- TEXT MESSAGES POP UPS ---------------*/}
-      <HeroMessages />
-
-      {/* --------------- 3D IMAGES ---------------*/}
-      <HeroProps />
-
       {/* --------------- HERO CONTENT ---------------*/}
-      <MarginTemplate>
-        <Stack align="center" spacing="3rem">
-          {/* --------------- MIDDLE ICON ---------------*/}
-          <HeroIcon />
+      <Stack align="center" spacing="3rem" pos="relative" w="100%">
+        {/* --------------- TEXT MESSAGES POP UPS ---------------*/}
+        <HeroMessages />
 
-          {/* --------------- TEXT AND CALL TO ACTION ---------------*/}
-          <HeroHeadline />
+        {/* --------------- 3D IMAGES ---------------*/}
+        <HeroProps />
 
-          {/* --------------- SOCIAL LINKS ---------------*/}
-          <SocialMedia />
-        </Stack>
-      </MarginTemplate>
+        {/* --------------- MIDDLE ICON ---------------*/}
+        <HeroIcon />
+
+        {/* --------------- TEXT AND CALL TO ACTION ---------------*/}
+        <HeroHeadline />
+
+        {/* --------------- SOCIAL LINKS ---------------*/}
+        <SocialMedia />
+      </Stack>
     </HeroTemplate>
   )
 }

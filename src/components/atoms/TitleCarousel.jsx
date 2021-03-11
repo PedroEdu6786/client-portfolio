@@ -4,7 +4,7 @@ const TitleCarousel = ({ children, ...rest }) => {
   return (
     <MotionHeading
       as="h2"
-      fontSize="5rem"
+      fontSize={{ base: '5rem', md: '8rem' }}
       color="portfolio.lightGray"
       // initial={{ x: '100%' }}
       // animate={{ x: '-100%' }}

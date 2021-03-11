@@ -6,7 +6,7 @@ const PageTemplate = ({ children, ...rest }) => {
   return (
     <Box {...rest}>
       <Header />
-      {children}
+      <Box pt="5rem">{children}</Box>
       <Footer />
     </Box>
   )

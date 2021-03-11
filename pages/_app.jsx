@@ -8,9 +8,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <CSSReset />
       <Fonts />
-      <AnimateSharedLayout type="crossfade">
-        <Component {...pageProps} />
-      </AnimateSharedLayout>
+      <Component {...pageProps} />
     </ChakraProvider>
   )
 }
