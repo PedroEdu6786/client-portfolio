@@ -1,14 +1,14 @@
-import { Heading } from '@chakra-ui/layout'
+import { MotionHeading } from '../../motion/motionComponents'
 
 const Title = ({ children, ...rest }) => {
   return (
-    <Heading
+    <MotionHeading
       fontSize={{ base: '1.8rem', md: '2rem', lg: '2.5rem' }}
       align="center"
       {...rest}
     >
       {children}
-    </Heading>
+    </MotionHeading>
   )
 }
 

@@ -40,10 +40,13 @@ const Navbar = ({ menuState }) => {
       >
         <AnimateSharedLayout>
           {items.map((item) => (
-            <Link href={item.id} onClick={() => setMenuState(false)}>
+            <Link
+              key={item.id}
+              href={item.id}
+              onClick={() => setMenuState(false)}
+            >
               <a>
                 <MenuItem
-                  key={item.id}
                   isSelected={selected === item.section}
                   setSelected={() => setSelected(item.section)}
                 >
