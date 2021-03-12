@@ -8,7 +8,7 @@ import { MotionStack } from '../../motion/motionComponents'
 
 const Hero = () => {
   return (
-    <HeroTemplate pos="relative" overflow="hidden">
+    <HeroTemplate id="hero" pos="relative" overflow="hidden">
       {/* --------------- HERO CONTENT ---------------*/}
       <MotionStack align="center" spacing="3rem" pos="relative" w="100%">
         {/* --------------- TEXT MESSAGES POP UPS ---------------*/}

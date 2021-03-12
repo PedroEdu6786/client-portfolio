@@ -3,7 +3,7 @@ import { Box, Stack } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { AnimateSharedLayout } from 'framer-motion'
 import MenuItem from '../atoms/MenuItem'
-import Link from 'next/link'
+import SmoothLink from '../atoms/SmoothLink'
 
 const Nav = styled(Box)`
   @media screen and (max-width: 767px) {
@@ -14,14 +14,14 @@ const Nav = styled(Box)`
     transition: 0.5s cubic-bezier(0.74, 0.14, 0.4, 0.96);
   }
 `
-const Navbar = ({ menuState }) => {
+const Navbar = ({ menuState, setMenuState }) => {
   const [selected, setSelected] = useState('Home')
 
   const items = [
-    { section: 'Home', id: '#' },
-    { section: 'Projects', id: '#projects' },
-    { section: 'Services', id: '#services' },
-    { section: 'Contact', id: '#contact' },
+    { section: 'Home', id: 'hero' },
+    { section: 'Projects', id: 'projects' },
+    { section: 'Services', id: 'services' },
+    { section: 'Contact', id: 'contact' },
   ]
 
   return (
@@ -40,20 +40,18 @@ const Navbar = ({ menuState }) => {
       >
         <AnimateSharedLayout>
           {items.map((item) => (
-            <Link
+            <SmoothLink
               key={item.id}
-              href={item.id}
+              to={item.id}
               onClick={() => setMenuState(false)}
             >
-              <a>
-                <MenuItem
-                  isSelected={selected === item.section}
-                  setSelected={() => setSelected(item.section)}
-                >
-                  {item.section}
-                </MenuItem>
-              </a>
-            </Link>
+              <MenuItem
+                isSelected={selected === item.section}
+                setSelected={() => setSelected(item.section)}
+              >
+                {item.section}
+              </MenuItem>
+            </SmoothLink>
           ))}
         </AnimateSharedLayout>
       </Stack>

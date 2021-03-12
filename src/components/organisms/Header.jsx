@@ -5,6 +5,7 @@ import Overlay from '../atoms/Overlay'
 import Navbar from '../molecules/Navbar'
 import Logo from '../molecules/Logo'
 import MarginTemplate from '../templates/MarginTemplate'
+import { MotionBox } from '../../motion/motionComponents'
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false)
@@ -22,12 +23,14 @@ const Header = () => {
   }
 
   return (
-    <Box
-      bgColor={screenOffset > 0 && 'portfolio.white'}
+    <MotionBox
+      bgColor={screenOffset > 0 && 'portfolio.gray'}
       w="100%"
       h="5rem"
       pos="fixed"
       zIndex="1"
+      initial={{ x: -200 }}
+      animate={{ x: 0 }}
     >
       <Box as="section" mx="auto" maxW="1400px" zIndex="10">
         {/* --------------- OVERLAY ---------------*/}
@@ -54,7 +57,7 @@ const Header = () => {
           </HStack>
         </MarginTemplate>
       </Box>
-    </Box>
+    </MotionBox>
   )
 }
 
