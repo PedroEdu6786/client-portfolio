@@ -13,7 +13,12 @@ const HeroMessages = () => {
           Web Developer
         </Heading>
       </TextMessage>
-      <TextMessage w="300px" left={{ base: '0', lg: 50 }} top="120">
+      <TextMessage
+        w="300px"
+        left={{ base: '0', lg: 50 }}
+        top="120"
+        transition={{ delay: 0.2 }}
+      >
         <Text fontWeight="600" size="md">
           What makes me different?
         </Text>

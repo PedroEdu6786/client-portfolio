@@ -1,10 +1,15 @@
-import { Button } from '@chakra-ui/button'
+import { MotionButton } from '../../motion/motionComponents'
 
 const ButtonAction = ({ children, ...rest }) => {
   return (
-    <Button bgColor="portfolio.blue" color="portfolio.white" {...rest}>
+    <MotionButton
+      bgColor="#6380E8"
+      color="portfolio.white"
+      _hover={{ bgColor: 'portfolio.darkBlue' }}
+      {...rest}
+    >
       {children}
-    </Button>
+    </MotionButton>
   )
 }
 
