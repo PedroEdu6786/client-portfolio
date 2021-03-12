@@ -29,8 +29,8 @@ const Header = () => {
       h="5rem"
       pos="fixed"
       zIndex="1"
-      initial={{ x: -200 }}
-      animate={{ x: 0 }}
+      initial={{ x: 200, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
     >
       <Box as="section" mx="auto" maxW="1400px" zIndex="10">
         {/* --------------- OVERLAY ---------------*/}
