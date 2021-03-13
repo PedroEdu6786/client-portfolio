@@ -9,6 +9,7 @@ import MarginTemplate from '../templates/MarginTemplate'
 import { projects } from '../../constants/projects'
 import SectionTemplate from '../templates/SectionTemplate'
 import { MotionHStack, MotionWrapItem } from '../../motion/motionComponents'
+import ProjectsFooter from '../molecules/ProjectsFooter'
 
 const Projects = () => {
   /* --------------- CONTEXTUAL ROUTING TOOLS ---------------*/
@@ -49,6 +50,9 @@ const Projects = () => {
         <AnimatePresence>
           {projectId && <ProjectDisplay id={projectId} />}
         </AnimatePresence>
+
+        {/*  --------------- PROJECTS FOOTER --------------- */}
+        <ProjectsFooter />
       </SectionTemplate>
     </AnimateSharedLayout>
   )
