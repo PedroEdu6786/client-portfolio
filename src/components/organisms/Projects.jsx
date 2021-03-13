@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Stack, Wrap, WrapItem } from '@chakra-ui/layout'
+import { Box, HStack, Stack, Wrap, WrapItem } from '@chakra-ui/layout'
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import Title from '../atoms/Title'
 import TitleCarousel from '../atoms/TitleCarousel'
@@ -8,6 +8,7 @@ import ProjectCard from '../molecules/ProjectCard'
 import MarginTemplate from '../templates/MarginTemplate'
 import { projects } from '../../constants/projects'
 import SectionTemplate from '../templates/SectionTemplate'
+import { MotionHStack, MotionWrapItem } from '../../motion/motionComponents'
 
 const Projects = () => {
   /* --------------- CONTEXTUAL ROUTING TOOLS ---------------*/
@@ -20,29 +21,26 @@ const Projects = () => {
         {/* --------------- PROJECT SUBTITLE ---------------*/}
         <Stack py="5rem" justify="center" pos="relative" overflow="hidden">
           <Title mx="2rem">Featured Projects that shocked clients</Title>
-          <TitleCarousel
-            pos="absolute"
-            clear="both"
-            display="inline-block"
-            whiteSpace="nowrap"
-            textOverflow="clip"
-            zIndex="-1"
-          >
-            Featured Projects
-          </TitleCarousel>
+          <MotionHStack spacing="2.5rem" pos="absolute" zIndex="-1">
+            <TitleCarousel>Featured Projects</TitleCarousel>
+            <TitleCarousel>Featured Projects</TitleCarousel>
+            <TitleCarousel>Featured Projects</TitleCarousel>
+          </MotionHStack>
         </Stack>
 
         {/* --------------- PROJECTS CARDS ---------------*/}
         <MarginTemplate>
           <Wrap mt="3rem" spacing="1.5rem">
             {projects.map((item) => (
-              <WrapItem
+              <MotionWrapItem
                 key={item.id}
-                flexGrow={item.id === 0 || item.id === 3 ? '6' : '1'}
                 flexBasis={{ base: '30rem', md: '40%' }}
+                style={{ flexGrow: item.id === 0 || item.id === 3 ? 3 : 1 }}
+                whileHover={{ flexGrow: 20 }}
+                transition={{ duration: 0.3, type: 'tween' }}
               >
                 <ProjectCard item={item} />
-              </WrapItem>
+              </MotionWrapItem>
             ))}
           </Wrap>
         </MarginTemplate>
