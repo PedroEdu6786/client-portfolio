@@ -1,26 +1,23 @@
 import { Image } from '@chakra-ui/image'
-import { Filter } from '../atoms/Filter'
 
 const ServicesProps = () => {
   return (
     <>
-      <Filter top="120px" right="-50px" />
       <Image
-        src="/img/3d-ring.png"
+        src="/img/3d-sphere.png"
         pos="absolute"
         w="150px"
         zIndex="-2"
-        top="120px"
-        right="-50px"
+        top="50px"
+        right={{ base: '-50px', md: 0, lg: '50' }}
       />
-      <Filter bottom="150px" left="-50px" />
       <Image
-        src="/img/3d-pill.png"
+        src="/img/3d-cube.png"
         pos="absolute"
-        w="150px"
+        w="200px"
         zIndex="-2"
         bottom="150px"
-        left="-50px"
+        left={{ base: '-50px', md: 0, lg: '50' }}
       />
     </>
   )
