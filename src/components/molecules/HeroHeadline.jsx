@@ -1,5 +1,6 @@
 import { MotionStack, MotionText } from '../../motion/motionComponents'
 import ButtonAction from '../atoms/ButtonAction'
+import SmoothLink from '../atoms/SmoothLink'
 import Title from '../atoms/Title'
 
 const HeroHeadline = () => {
@@ -18,7 +19,9 @@ const HeroHeadline = () => {
       <Title fontSize={{ base: '1.5rem', md: '3vh' }}>
         Building apps, growing businesses and experiences
       </Title>
-      <ButtonAction size="lg">Check out my work!</ButtonAction>
+      <ButtonAction size="lg">
+        <SmoothLink to="projects">Check out my work!</SmoothLink>
+      </ButtonAction>
     </MotionStack>
   )
 }
