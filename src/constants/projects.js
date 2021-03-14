@@ -7,7 +7,7 @@ export const projects = [
     projectTitle: 'ProShop',
     img: '/img/project-3.webp',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At ducimus minima dicta obcaecati perferendis mollitia dolorum reiciendis autem accusantium delectus provident quis id explicabo perspiciatis quasi, consequatur repudiandae omnis dolore qui. Et architecto ab vero blanditiis dolorum temporibus excepturi at.',
+      'Website that has focus on technological products. Website includes a custom content management system for products, paypal via payments, products reviews and start, latest dynamic products, login, register and more! If you want your ecommerce to include this functionalities contact me',
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ export const projects = [
     projectTitle: 'Plant App',
     img: '/img/project-2.webp',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At ducimus minima dicta obcaecati perferendis mollitia dolorum reiciendis autem accusantium delectus provident quis id explicabo perspiciatis quasi, consequatur repudiandae omnis dolore qui. Et architecto ab vero blanditiis dolorum temporibus excepturi at.',
+      "Plant ecommerce app that lets the manager upload their content to wordpress cms and lets it handle clients, products, payments and more. Let's start and create your own personal project",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const projects = [
     projectTitle: 'Sun.mx',
     img: '/img/project-1.webp',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At ducimus minima dicta obcaecati perferendis mollitia dolorum reiciendis autem accusantium delectus provident quis id explicabo perspiciatis quasi, consequatur repudiandae omnis dolore qui. Et architecto ab vero blanditiis dolorum temporibus excepturi at.',
+      "Sun.mx business website where it's posted their latest products dynamically, also improving and acquiring more leads by owning a subscription based strategy for email marketing so new clients can receive exclusive access to new products and discounts",
   },
   // {
   //   id: 3,
