@@ -17,7 +17,7 @@ const SocialIcon = ({ icon, to, ...rest }) => {
       whileTap="show"
     >
       <Link href={to}>
-        <a target="_blank">
+        <a target="_blank" rel="noreferrer">
           <ReactIcon as={icon} fontSize="2rem" {...rest} />
         </a>
       </Link>

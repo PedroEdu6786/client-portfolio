@@ -17,6 +17,7 @@ const HeroProps = () => {
         initial="hidden"
         animate="visible"
         transition={{ delay: 0.5 }}
+        alt="3d-prop"
       />
       <MotionImage
         pos="absolute"
@@ -31,6 +32,7 @@ const HeroProps = () => {
         initial="hidden"
         animate="visible"
         transition={{ delay: 0.4 }}
+        alt="3d-prop"
       />
     </>
   )
