@@ -9,7 +9,7 @@ const Nav = styled(Box)`
   @media screen and (max-width: 767px) {
     position: fixed;
     width: 80%;
-    height: 100%;
+    height: 200vh;
     padding: 2rem;
     transition: 0.5s cubic-bezier(0.74, 0.14, 0.4, 0.96);
   }

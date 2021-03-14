@@ -9,7 +9,7 @@ const Overlay = () => {
         top="0"
         zIndex="1"
         w="100%"
-        h="100%"
+        h="200vh"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
       ></MotionBox>
