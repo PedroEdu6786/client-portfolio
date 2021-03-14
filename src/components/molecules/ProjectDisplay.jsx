@@ -60,7 +60,7 @@ const ProjectDisplay = ({ id }) => {
           >
             <MotionImage
               src={img}
-              alt="project-prop"
+              alt="project-image"
               width={184}
               height={360}
               bottom="-250"

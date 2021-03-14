@@ -10,6 +10,7 @@ const ServicesProps = () => {
         zIndex="-2"
         top="50px"
         right={{ base: '-50px', md: 0, lg: '50' }}
+        alt="3d-prop"
       />
       <Image
         src="/img/3d-cube.webp"
@@ -18,6 +19,7 @@ const ServicesProps = () => {
         zIndex="-2"
         bottom="150px"
         left={{ base: '-50px', md: 0, lg: '50' }}
+        alt="3d-prop"
       />
     </>
   )
