@@ -4,7 +4,7 @@ const ServicesProps = () => {
   return (
     <>
       <Image
-        src="/img/3d-sphere.png"
+        src="/img/3d-sphere.webp"
         pos="absolute"
         w="150px"
         zIndex="-2"
@@ -12,7 +12,7 @@ const ServicesProps = () => {
         right={{ base: '-50px', md: 0, lg: '50' }}
       />
       <Image
-        src="/img/3d-cube.png"
+        src="/img/3d-cube.webp"
         pos="absolute"
         w="200px"
         zIndex="-2"
