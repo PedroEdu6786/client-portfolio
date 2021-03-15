@@ -4,7 +4,7 @@ import ReactIcon from '../atoms/ReactIcon'
 
 const ServiceBox = ({ icon, title, description, color }) => {
   return (
-    <MotionStack>
+    <MotionStack maxW="500px">
       <ReactIcon icon={icon} color={color} />
       <Heading as="h3" size="md">
         {title}
